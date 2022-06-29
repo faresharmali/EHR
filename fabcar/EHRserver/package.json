@@ -1,0 +1,60 @@
+{
+  "name": "EHRserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "engines": {
+    "node": "14.17.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start-server": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "fabric-ca-client": "^2.2.4",
+    "fabric-network": "^2.2.4",
+    "image-hash": "^5.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.2",
+    "nano": "^10.0.0",
+    "node-couchdb": "^1.3.0",
+    "node-couchdb-plugin-memcached": "^0.0.2",
+    "swagger-ui-express": "^4.3.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^2.0.10",
+    "nyc": "^14.1.1",
+    "sinon": "^7.1.1",
+    "sinon-chai": "^3.3.0"
+  },
+  "nyc": {
+    "exclude": [
+      "coverage/**",
+      "test/**"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "all": true,
+    "check-coverage": true,
+    "statements": 100,
+    "branches": 100,
+    "functions": 100,
+    "lines": 100
+  }
+}
